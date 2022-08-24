@@ -61,6 +61,10 @@ class HomeState extends State<Home> {
             // faq
             _drawerItem('Help', const Icon(Icons.help), 2),
 
+            // fraction learn link
+            _drawerItem(
+                'Learn', const Icon(Icons.calendar_view_day_rounded), 7),
+
             // donate
             _drawerItem(
                 'Contribute', const Icon(Icons.attach_money_rounded), 3),
@@ -77,8 +81,9 @@ class HomeState extends State<Home> {
 
             // Privacy Policy
             _drawerItem('Privacy Policy', const Icon(Icons.policy_rounded), 5),
-            
-            _drawerItem('Terms & Conditions', const Icon(Icons.book_rounded), 6),
+
+            _drawerItem(
+                'Terms & Conditions', const Icon(Icons.book_rounded), 6),
           ],
         ),
       ),
@@ -177,7 +182,12 @@ class HomeState extends State<Home> {
                 'https://github.com/ShimronAlakkal/tradebook/blob/main/Privacy_Policy.md');
             break;
           case 6:
-            _launchItemInPhone('https://github.com/ShimronAlakkal/tradebook/blob/main/TNC.md');
+            _launchItemInPhone(
+                'https://github.com/ShimronAlakkal/tradebook/blob/main/TNC.md');
+            break;
+          case 7:
+            _launchItemInPhone(
+                'https://github.com/Fraction-Technologies/Fraction-learn');
             break;
         }
       },
