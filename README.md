@@ -1,4 +1,4 @@
-# ✅ fraction ( 1.2.0 + 5)
+# ✅ fraction ( 1.2.2 + 7)
 
 lts 
 ```
