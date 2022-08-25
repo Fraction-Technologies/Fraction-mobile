@@ -407,291 +407,285 @@ class _PivotPointsState extends State<PivotPoints> {
     switch (index) {
       case 2:
         //  results for spp
-        return Expanded(
-          child: ListView(
-            children: [
-              // p r1 r2 s1 s2
-              ListTile(
-                leading: const Text(
-                  'Resistance 2  : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r2'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+        return ListView(
+          children: [
+            // p r1 r2 s1 s2
+            ListTile(
+              leading: const Text(
+                'Resistance 2  : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r2'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Resistance 1 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r1'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Resistance 1 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r1'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Pivot Point : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['p'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Pivot Point : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['p'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 1 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s1'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 1 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s1'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 2 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s2'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 2 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s2'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         );
         break;
       case 3:
 // result for fibo pp
-        return Expanded(
-          child: ListView(
-            children: [
-              // p r1 r2 s1 s2
-              ListTile(
-                leading: const Text(
-                  'Resistance 3 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r3'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+        return ListView(
+          children: [
+            // p r1 r2 s1 s2
+            ListTile(
+              leading: const Text(
+                'Resistance 3 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r3'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Resistance 2 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r2'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Resistance 2 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r2'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Resistance 1 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r1'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Resistance 1 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r1'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Pivot Point : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['p'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Pivot Point : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['p'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 1 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s1'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 1 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s1'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 2 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s2'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 2 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s2'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 3 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r3'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 3 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r3'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         );
         break;
       case 4:
         // Camarilla pp
-        return Expanded(
-          child: ListView(
-            children: [
-              ListTile(
-                leading: const Text(
-                  'Resistance 4 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r4'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+        return ListView(
+          children: [
+            ListTile(
+              leading: const Text(
+                'Resistance 4 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r4'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Resistance 3 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r3'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Resistance 3 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r3'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Resistance 2 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r2'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Resistance 2 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r2'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Resistance 1 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r1'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Resistance 1 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r1'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 1 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s1'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 1 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s1'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 2 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s2'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 2 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s2'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 3 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r3'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 3 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r3'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 4 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s4'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 4 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s4'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         );
         break;
       case 5:
@@ -746,103 +740,101 @@ class _PivotPointsState extends State<PivotPoints> {
 
       case 6:
         // woodies pp
-        return Expanded(
-          child: ListView(
-            children: [
-              // p r1 r2 s1 s2
-              ListTile(
-                leading: const Text(
-                  'Resistance 3 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r3'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+        return ListView(
+          children: [
+            // p r1 r2 s1 s2
+            ListTile(
+              leading: const Text(
+                'Resistance 3 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r3'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Resistance 2 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r2'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Resistance 2 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r2'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Resistance 1 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['r1'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Resistance 1 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['r1'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Pivot Point : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['p'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Pivot Point : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['p'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 1 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s1'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 1 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s1'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 2 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s2'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 2 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s2'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              ListTile(
-                leading: const Text(
-                  'Support 3 : ',
-                  style: TextStyle(fontSize: 16),
-                ),
-                title: Text(
-                  result['s3'].toStringAsFixed(2),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+            ),
+            ListTile(
+              leading: const Text(
+                'Support 3 : ',
+                style: TextStyle(fontSize: 16),
+              ),
+              title: Text(
+                result['s3'].toStringAsFixed(2),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         );
         break;
     }
