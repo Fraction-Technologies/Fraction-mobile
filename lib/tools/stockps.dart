@@ -361,7 +361,7 @@ class _StockPSState extends State<StockPS> {
                               ),
                             ),
                             content: Container(
-                              height: MediaQuery.of(context).size.height * 0.3,
+                              height: MediaQuery.of(context).size.height * 0.7,
                               width: MediaQuery.of(context).size.width * 0.8,
                               margin: const EdgeInsets.symmetric(
                                   horizontal: 30, vertical: 10),
