@@ -410,71 +410,20 @@ class _PivotPointsState extends State<PivotPoints> {
         return ListView(
           children: [
             // p r1 r2 s1 s2
-            ListTile(
-              title: const Text(
-                'Resistance 2  : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r2'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Resistance 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Pivot Point : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['p'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 2 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s2'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
+
+            resultListTile(
+                title: 'Resistance 2',
+                subtitle: result['r2'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Resistance 1',
+                subtitle: result['r1'].toStringAsFixed(2)),
+
+            resultListTile(
+                title: 'Pivot Point', subtitle: result['p'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 1', subtitle: result['s1'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 2', subtitle: result['s2'].toStringAsFixed(2))
           ],
         );
         break;
@@ -483,97 +432,27 @@ class _PivotPointsState extends State<PivotPoints> {
         return ListView(
           children: [
             // p r1 r2 s1 s2
-            ListTile(
-              title: const Text(
-                'Resistance 3 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r3'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Resistance 2 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r2'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Resistance 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Pivot Point : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['p'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 2 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s2'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 3 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r3'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
+            resultListTile(
+                title: 'Resistance 3 : ',
+                subtitle: result['r3'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Resistance 2 : ',
+                subtitle: result['r2'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Resistance 1 : ',
+                subtitle: result['r1'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Pivot Point : ',
+                subtitle: result['p'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 1 : ',
+                subtitle: result['s1'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 2 : ',
+                subtitle: result['s2'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 3 : ',
+                subtitle: result['r3'].toStringAsFixed(2)),
           ],
         );
         break;
@@ -581,110 +460,30 @@ class _PivotPointsState extends State<PivotPoints> {
         // Camarilla pp
         return ListView(
           children: [
-            ListTile(
-              title: const Text(
-                'Resistance 4 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r4'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Resistance 3 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r3'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Resistance 2 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r2'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Resistance 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 2 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s2'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 3 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r3'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 4 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s4'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
+            resultListTile(
+                title: 'Resistance 4 : ',
+                subtitle: result['r4'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Resistance 3 : ',
+                subtitle: result['r3'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Resistance 2 : ',
+                subtitle: result['r2'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Resistance 1 : ',
+                subtitle: result['r1'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 1 : ',
+                subtitle: result['s1'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 2 : ',
+                subtitle: result['s2'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 3 : ',
+                subtitle: result['r3'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 4 : ',
+                subtitle: result['s4'].toStringAsFixed(2)),
           ],
         );
         break;
@@ -693,45 +492,15 @@ class _PivotPointsState extends State<PivotPoints> {
         return ListView(
           children: [
             // p r1 r2 s1 s2
-            ListTile(
-              title: const Text(
-                'Resistance 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Pivot Point : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['p'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
+            resultListTile(
+                title: 'Resistance 1 : ',
+                subtitle: result['r1'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Pivot Point : ',
+                subtitle: result['p'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 1 : ',
+                subtitle: result['s1'].toStringAsFixed(2)),
           ],
         );
         break;
@@ -741,100 +510,46 @@ class _PivotPointsState extends State<PivotPoints> {
         return ListView(
           children: [
             // p r1 r2 s1 s2
-            ListTile(
-              title: const Text(
-                'Resistance 3 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r3'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Resistance 2 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r2'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Resistance 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['r1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Pivot Point : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['p'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 1 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s1'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 2 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s2'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                'Support 3 : ',
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text(
-                result['s3'].toStringAsFixed(2),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ),
+            resultListTile(
+                title: 'Resistance 3 : ',
+                subtitle: result['r3'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Resistance 2 : ',
+                subtitle: result['r2'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Resistance 1 : ',
+                subtitle: result['r1'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Pivot Point : ',
+                subtitle: result['p'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 1 : ',
+                subtitle: result['s1'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 2 : ',
+                subtitle: result['s2'].toStringAsFixed(2)),
+            resultListTile(
+                title: 'Support 3 : ',
+                subtitle: result['s3'].toStringAsFixed(2)),
           ],
         );
         break;
     }
+  }
+
+  Widget resultListTile({String title, String subtitle}) {
+    return ListTile(
+      title: Text(
+        title,
+        style: const TextStyle(fontSize: 16),
+      ),
+      subtitle: Text(
+        subtitle,
+        style: const TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w800,
+        ),
+      ),
+    );
   }
 }
