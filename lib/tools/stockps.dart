@@ -56,6 +56,7 @@ class _StockPSState extends State<StockPS> {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -80,7 +81,7 @@ class _StockPSState extends State<StockPS> {
       body: Form(
         key: formKey,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: ListView(
             children: [
               // _isBannerAdReady
@@ -92,28 +93,25 @@ class _StockPSState extends State<StockPS> {
               //         ),
               //       )
               //     : const SizedBox(),
-
-              const SizedBox(
-                height: 25,
+              SizedBox(
+                height: height * 0.02,
               ),
 
               // Capital Field
               TextFormField(
                 autofocus: true,
-
-                // ignore: missing_return
                 validator: (value) {
                   if (value.isEmpty) {
                     return 'This field cannot be empty';
                   }
+                  return null;
                 },
                 maxLines: 1,
                 cursorWidth: 3,
                 decoration: InputDecoration(
-                  hintText: ' Capital',
-                  hintStyle: const TextStyle(
-                    letterSpacing: 1.4,
-                  ),
+                  labelText: 'Capital',
+                  hintText: 'Eg. 20000',
+                  hintStyle: const TextStyle(),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -127,27 +125,24 @@ class _StockPSState extends State<StockPS> {
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
 
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: height * 0.02,
               ),
 
               // Leverage on capital
               TextFormField(
                 autofocus: true,
-
-                // ignore: missing_return
                 validator: (value) {
                   if (value.isEmpty) {
                     return 'This field cannot be empty';
                   }
+                  return null;
                 },
                 maxLines: 1,
                 cursorWidth: 3,
                 decoration: InputDecoration(
-                  hintText: ' Leverage on capital',
-                  hintStyle: const TextStyle(
-                    letterSpacing: 1.4,
-                  ),
+                  labelText: ' Leverage on capital',
+                  hintText: 'Eg. If 2X, type 2. If 5X, type 5.',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -155,12 +150,13 @@ class _StockPSState extends State<StockPS> {
                 controller: leverageController,
                 keyboardType: TextInputType.number,
                 cursorColor: Colors.deepPurple.shade300,
-                cursorHeight: 28, textInputAction: TextInputAction.next,
+                cursorHeight: 28,
+                textInputAction: TextInputAction.next,
                 style:
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: height * 0.02,
               ),
 
               // Risk Field
@@ -177,9 +173,6 @@ class _StockPSState extends State<StockPS> {
                 cursorWidth: 3,
                 decoration: InputDecoration(
                   hintText: ' Risk ( % )',
-                  hintStyle: const TextStyle(
-                    letterSpacing: 1.4,
-                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -192,10 +185,9 @@ class _StockPSState extends State<StockPS> {
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 textInputAction: TextInputAction.next,
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: height * 0.02,
               ),
-
               // The Entry
               TextFormField(
                 // ignore: missing_return
@@ -212,9 +204,6 @@ class _StockPSState extends State<StockPS> {
                 cursorWidth: 3,
                 decoration: InputDecoration(
                   hintText: ' Entry Price',
-                  hintStyle: const TextStyle(
-                    letterSpacing: 1.4,
-                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -227,8 +216,8 @@ class _StockPSState extends State<StockPS> {
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 textInputAction: TextInputAction.next,
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: height * 0.02,
               ),
 
               // SL
@@ -249,9 +238,6 @@ class _StockPSState extends State<StockPS> {
                 cursorWidth: 3,
                 decoration: InputDecoration(
                   hintText: ' Stop Loss',
-                  hintStyle: const TextStyle(
-                    letterSpacing: 1.4,
-                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -263,8 +249,8 @@ class _StockPSState extends State<StockPS> {
                 style:
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: height * 0.02,
               ),
 
               // Target
@@ -281,9 +267,6 @@ class _StockPSState extends State<StockPS> {
                 cursorWidth: 3,
                 decoration: InputDecoration(
                   hintText: ' Target',
-                  hintStyle: const TextStyle(
-                    letterSpacing: 1.4,
-                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -295,7 +278,9 @@ class _StockPSState extends State<StockPS> {
                 style:
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-
+              SizedBox(
+                height: height * 0.06,
+              ),
               //  fa button
               Padding(
                 padding: const EdgeInsets.only(top: 30.0),
@@ -360,30 +345,34 @@ class _StockPSState extends State<StockPS> {
                                 ),
                               ),
                             ),
-                            content: Container(
-                              height: MediaQuery.of(context).size.height * 0.7,
-                              width: MediaQuery.of(context).size.width * 0.8,
-                              margin: const EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 10),
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                mainAxisSize: MainAxisSize.max,
+                            content: SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.9,
+                              width: MediaQuery.of(context).size.width,
+                              child: ListView(
                                 children: [
-                                  Text(
-                                      'Leveraged Capital : $leverageBasedCapital'),
-                                  Text('Number of shares : $numberOfShares'),
-                                  Text(
-                                      'Total Risk Involved : ${totalRisk.toStringAsFixed(2)}'),
-                                  Text(
-                                      'Risk per Share : ${totalRisk / numberOfShares}'),
-                                  Text('Reward per Share : $rewardPerShare'),
-                                  Text('Target profit :  $targetProfit'),
-                                  Text(
-                                      'risk to reward ratio : ${totalRisk / totalRisk} : ${(targetProfit / totalRisk).toStringAsFixed(2)} ')
+                                  resultListTile(
+                                      title: 'Leveraged Capital',
+                                      subtitle: '$leverageBasedCapital'),
+                                  resultListTile(
+                                      title: 'Number of shares',
+                                      subtitle: '$numberOfShares'),
+                                  resultListTile(
+                                      title: 'Total Risk Involved',
+                                      subtitle: totalRisk.toStringAsFixed(2)),
+                                  resultListTile(
+                                      title: 'Risk per Share',
+                                      subtitle:
+                                          '${totalRisk / numberOfShares}'),
+                                  resultListTile(
+                                      title: 'Reward per Share',
+                                      subtitle: '$rewardPerShare'),
+                                  resultListTile(
+                                      title: 'Target Profit',
+                                      subtitle: '$targetProfit'),
+                                  resultListTile(
+                                      title: 'Risk to Reward ratio',
+                                      subtitle:
+                                          '${totalRisk / totalRisk} : ${(targetProfit / totalRisk).toStringAsFixed(2)}'),
                                 ],
                               ),
                             ),
@@ -421,6 +410,22 @@ class _StockPSState extends State<StockPS> {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget resultListTile({String title, String subtitle}) {
+    return ListTile(
+      title: Text(
+        title,
+        style: const TextStyle(fontSize: 16),
+      ),
+      subtitle: Text(
+        subtitle,
+        style: const TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w800,
         ),
       ),
     );
