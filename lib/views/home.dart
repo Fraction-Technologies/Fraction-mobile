@@ -38,7 +38,7 @@ class HomeState extends State<Home> {
                     return ;
                   },
                   image:const NetworkImage(
-                      'https://github.com/ShimronAlakkal/tradebook/blob/dev/dh.jpg?raw=true'),
+                      'https://github.com/Fraction-Technologies/Fraction-mobile/blob/dev/mockups/dh.jpg?raw=True'),
                 ),
               ),
               child: Stack(
