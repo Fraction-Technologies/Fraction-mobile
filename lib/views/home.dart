@@ -31,11 +31,14 @@ class HomeState extends State<Home> {
             DrawerHeader(
               margin: EdgeInsets.zero,
               padding: EdgeInsets.zero,
-              decoration: const BoxDecoration(
+              decoration:  BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: NetworkImage(
-                      'https://github.com/ShimronAlakkal/tradebook/blob/main/dh.jpg?raw=true'),
+                  onError: (exception, stackTrace) {
+                    return ;
+                  },
+                  image:const NetworkImage(
+                      'https://github.com/ShimronAlakkal/tradebook/blob/dev/dh.jpg?raw=true'),
                 ),
               ),
               child: Stack(
